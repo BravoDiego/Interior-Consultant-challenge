@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #181719;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 77px 20px 77px;
+}
+
+#logo {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    padding: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-between;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80%;
+    line-height: 22px;
+}
+
+hr {
+    border: white solid 1px;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 1px;
+}
+
+ul li {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+ul li:not(li:first-child):after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    width: 0;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+
+ul li:not(h1:first-child):hover::after {
+    width: 100%;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.openMenu, .mainMenu .closeMenu {
+    display: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    margin-top: 15%;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 100%;
+}
+
+#left h1 {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 61px;
+}
+
+#left p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+#btn {
+    transition: 0.8s;
+    transform: translateX(0);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btn:hover {
+    transition: 0.5s;
+    transform: translateX(20px);
+}
+
+#btn h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+#rectangle {
+    width: 11px; 
+    height: 3px; 
+    background: white; 
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 7px solid white;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+#rigth {
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#rigth img {
+    width: 100%;
+}
+
+#comment {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    width: 52%;
+    padding: 4%;
+    padding-bottom: 5%;
+    position: relative;
+    right: 15%;
+    bottom: 4em;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+}
+
+#profile img {
+    border-radius: 50%;
+    margin-right: 3%;
+    width: 20%;
+}
+
+#infoprofile {
+    width: 100%;
+}
+
+#infoprofile h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+#infoprofile h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #828282;
+}
+
+#textcomment {
+    margin-top: 3%;
+    width: 100%;
+}
+
+#textcomment h1{
+    font-size: 2rem;
+}
+
+footer {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+
+
+    color: #BDBDBD;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-top: 50px;
+    padding-bottom: 24px;
+}
+
+#lien {
+    text-decoration: underline;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+
+    padding-left: 3px;
+    padding-right: 3px;
+    color: #BDBDBD;
+}
+
+#ion {
+    display: none;
+    font-size: 32px;
+}
+@media (max-width: 1050px) {
+    .left {
+        padding: 0px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 860px) {
+    .mainMenu {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10000;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: left 1s ease;
+        display: none;
+    }
+
+    .openMenu {
+        display: block;
+        font-size: 28px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #rigth {
+        margin-top: 20%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media (max-width: 665px) {
+    #textcomment h1{
+        font-size: 150%;
+    }
+
+    #left h1 {
+        font-size: 40px;
+    }
+
+    #left p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #left {
+        padding: 5%;
+    }
+}
+
+@media (max-width: 370px) {
+    #textcomment h1 {
+        font-size: 120%;
+    }
+
+    #left h1 {
+        font-size: 35px;
+    }
+
+    #left p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    #logo {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+    }
+}
